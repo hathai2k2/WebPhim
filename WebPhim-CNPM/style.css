@@ -35,7 +35,6 @@ li, a, button{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     color: #FB8850;
-    /* width: 100px; */
 }
 
 #header .nav{
@@ -106,7 +105,7 @@ li, a, button{
     padding: 0 6px;
 }
 
-/*--------------------*/
+
 #header .buy-button{
     padding: 9px 25px;
     background-color: rgba(251, 133, 0, 1);
@@ -131,6 +130,138 @@ li, a, button{
 .nav-login:hover, .nav-register:hover{
     color: #FB8850;
 }
+
+.show-btn{
+    position: fixed;
+    left: 0px;
+    top: 100px;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #000814;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: left 0.4s ease;
+    z-index: 1;
+}
+
+.show-btn .fas{
+    color: #fff;
+    font-size: 25px;
+    line-height: 45px;
+}
+
+.show-btn.click .fas::before{
+    content: '\f00d';
+}
+
+.show-btn.click{
+    left: 290px;
+}
+
+.sidebarMenu{
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    /* left: 0; */
+    background: #000814;
+    z-index: 1;
+    left: -280px;
+    transition: left 0.4s ease;
+}
+
+.sidebarMenu.show{
+    left: 0px;
+}
+
+.sidebarMenu .menuTitle{
+    font-size: 25px;
+    color: #FB8850;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 900;
+}
+
+.sidebarMenu ul{
+    background-color: #000814;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+.sidebarMenu ul li:last-child{
+    border-bottom: 1px solid rgba(251, 133, 0, 0.05);
+}
+
+.sidebarMenu ul li{
+    line-height: 50px;
+    border-bottom: 1px solid rgba(251, 133, 0, 0.2);
+}
+
+.sidebarMenu ul li a{
+    width: 100%;
+    font-size: 18px;
+    padding-left: 25px;
+    font-weight: 600;
+    display: block;
+    transition: all 0.3s ease 0s;
+    border-left: 3px solid transparent;
+    position: relative;
+}
+
+.sidebarMenu ul li.active a{
+    color: #FB8850;
+    border-left-color: #FB8850;
+}
+
+.sidebarMenu ul .hot-movie-subMenu.show{
+    display: block;
+}
+
+.sidebarMenu ul .service-subMenu.show1{
+    display: block;
+}
+
+.sidebarMenu ul ul{ /* Sub menu */
+    display: none;
+    position: static;
+}
+
+.sidebarMenu ul ul li{  
+    line-height: 40px;
+    border-bottom: none;
+}
+
+.sidebarMenu ul ul li a{
+    padding-left: 60px;
+}
+
+.sidebarMenu ul li.active ul li a{
+    color: white;
+    border-left-color: transparent;
+}
+
+.sidebarMenu ul ul li a:hover{
+    color: #FB8850!important;
+}
+
+
+.sidebarMenu ul li a .fas{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 24px;
+    transform: translateY(-50%);
+    transition: transform 0.6s;
+}
+
+.sidebarMenu ul li a .fas.rolate{
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+
+
 
 
 #content{
